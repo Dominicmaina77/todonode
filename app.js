@@ -10,6 +10,10 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log("MongoDB failed", err));
 
+// body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // define routes
 const port = 8080;
 app.listen(port,()=>{
